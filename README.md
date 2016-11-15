@@ -6,7 +6,7 @@ Here is what the author has to say about motionEye:
 
 > motionEye is a web frontend for the motion daemon, written in Python.
 
-Very sucinct! This project is just a Docker container that makes it easy to deploy motionEye on your Raspberry Pi.
+Very succinct! This project is just a Docker container that makes it easy to deploy motionEye on your Raspberry Pi.
 
 ## Getting Docker on your Raspberry Pi
 I recommend checking out [Hypriot](http://blog.hypriot.com/) and their [Getting Started](http://blog.hypriot.com/getting-started-with-docker-on-your-arm-device/) guide
