@@ -1,0 +1,11 @@
+version: '2'
+services:
+  motioneye:
+    build: .
+    container_name: motioneye
+    ports:
+      - "8765:8765"
+    volumes:
+      - recordings:/var/lib/motioneye
+volumes:
+  recordings: {}
