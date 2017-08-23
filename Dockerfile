@@ -1,6 +1,8 @@
 FROM resin/rpi-raspbian:jessie
 MAINTAINER ViViDboarder <ViViDboarder@gmail.com>
 
+RUN [ "cross-build-start" ]
+
 # Instal Python dependencies
 RUN echo 'deb-src http://archive.raspbian.org/raspbian jessie main contrib non-free rpi firmware' >> /etc/apt/sources.list && \
     apt-get update && apt-get install -y \
@@ -46,12 +48,14 @@ VOLUME /etc/motioneye
 RUN mkdir -p /var/lib/motioneye
 VOLUME /var/lib/motioneye
 
+RUN [ "cross-build-end" ]
+
 EXPOSE 8765
 
 # RUN useradd motioneye
 # RUN chown -R motioneye /etc/motioneye /var/lib/motioneye
 # USER motioneye
 
-CMD test -e /etc/motioneye/motioneye.conf || \    
+CMD test -e /etc/motioneye/motioneye.conf || \
     cp /usr/local/share/motioneye/extra/motioneye.conf.sample /etc/motioneye/motioneye.conf ; \
     /usr/local/bin/meyectl startserver -c /etc/motioneye/motioneye.conf
