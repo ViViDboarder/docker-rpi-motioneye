@@ -1,6 +1,9 @@
 # docker-rpi-motioneye
 Docker image for running [motionEye](https://github.com/ccrisan/motioneye) on a Raspberry Pi
 
+# Deprecated
+It now appears that there is an official image for armhf. Check out the instructions on the motionEye wiki https://github.com/ccrisan/motioneye/wiki/Install-in-Docker
+
 ## motionEye
 Here is what the author has to say about motionEye:
 
